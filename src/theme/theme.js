@@ -7,4 +7,4 @@ export const theme = {
     font: "#F8F9FF",
     background: "#02061C",
   },
-}
+};

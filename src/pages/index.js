@@ -1,22 +1,15 @@
-import React, { useContext } from "react"
-import { css } from "@emotion/react"
-import { useTheme } from "@emotion/react"
-import Context from "../store/context"
-import Layout from "../components/Layout"
-import Toggle from "../components/Toggle"
+import React, { useContext } from "react";
+import { useTheme } from "@emotion/react";
+import Context from "../store/context";
+import Layout from "../components/Layout";
+import "../theme/global.css";
 
 const IndexPage = () => {
-  const { state } = useContext(Context)
-
-  const theme = useTheme()
-
   return (
     <React.Fragment>
-      <Layout>
-        <Toggle />
-      </Layout>
+      <Layout>Hello</Layout>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

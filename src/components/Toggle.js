@@ -1,12 +1,12 @@
-import React, { useContext } from "react"
-import { css } from "@emotion/react"
-import { useTheme } from "@emotion/react"
-import Context from "../store/context"
+import React, { useContext } from "react";
+import { css } from "@emotion/react";
+import { useTheme } from "@emotion/react";
+import Context from "../store/context";
 
 const Toggle = () => {
-  const { state, dispatch } = useContext(Context)
+  const { state, dispatch } = useContext(Context);
 
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <React.Fragment>
@@ -37,8 +37,8 @@ const Toggle = () => {
         css={css`
           cursor: pointer;
           text-indent: -9999px;
-          width: 500px;
-          height: 100px;
+          width: 62.5px;
+          height: 25px;
           background: ${theme.light.font};
           display: block;
           border-radius: 100px;
@@ -47,10 +47,10 @@ const Toggle = () => {
           &::after {
             content: "";
             position: absolute;
-            top: 5px;
+            top: 1px;
             left: 5px;
-            width: 90px;
-            height: 90px;
+            width: 22.5px;
+            height: 22.5px;
             background: #fff;
             border-radius: 90px;
             transition: 0.3s;
@@ -58,12 +58,12 @@ const Toggle = () => {
           }
 
           &:active::after {
-            width: 130px;
+            width: 30px;
           }
         `}
       ></label>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Toggle
+export default Toggle;

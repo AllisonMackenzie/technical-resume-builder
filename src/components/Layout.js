@@ -1,12 +1,13 @@
-import React, { useContext } from "react"
-import { Global, css } from "@emotion/react"
-import { useTheme } from "@emotion/react"
-import Context from "../store/context"
+import React, { useContext } from "react";
+import { Global, css } from "@emotion/react";
+import { useTheme } from "@emotion/react";
+import NavBar from "../components/NavBar";
+import Context from "../store/context";
 
 const Layout = ({ children }) => {
-  const { state } = useContext(Context)
+  const { state } = useContext(Context);
 
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <React.Fragment>
@@ -20,9 +21,6 @@ const Layout = ({ children }) => {
             }
 
             body {
-              display: flex;
-              justify-content: center;
-              align-items: center;
               height: 100vh;
               font-family: "Hind", sans-serif;
               background-color: ${state.isDark
@@ -37,8 +35,9 @@ const Layout = ({ children }) => {
         />
         {children}
       </div>
+      <NavBar />
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

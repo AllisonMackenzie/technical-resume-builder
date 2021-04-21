@@ -1,5 +1,8 @@
+const { colors } = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  purge: [],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -8,4 +11,4 @@ module.exports = {
     extend: {},
   },
   plugins: ["gatsby-plugin-postcss"],
-}
+};
