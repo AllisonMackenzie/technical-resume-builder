@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
+      <NavBar />
       <div>
         <Global
           styles={css`
@@ -26,16 +27,12 @@ const Layout = ({ children }) => {
               background-color: ${state.isDark
                 ? theme.dark.background
                 : theme.light.background};
-            }
-
-            h1 {
               color: ${state.isDark ? theme.dark.font : theme.light.font};
             }
           `}
         />
         {children}
       </div>
-      <NavBar />
     </React.Fragment>
   );
 };

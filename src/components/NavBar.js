@@ -1,28 +1,31 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Toggle from "./Toggle";
-import "tailwindcss/tailwind.css";
-
 /**
  *
  */
 export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showDownloadBtn: true,
+    };
+  }
+
   render() {
     return (
       <React.Fragment>
         <nav className="bg-blue-900 shadow-lg border-b border-black">
           <div className="container mx-auto">
             <div className="sm:flex justify-center">
-              <Link
-                className="text-white hover:text-green-300 text-3xl font-bold p-1.5"
-                to="/"
-              >
-                {/* Home */}
-                Home
-              </Link>
-              <div className="text-white text-3xl p-1.5"> | </div>
               <ul className="text-white sm:self-center text-xl border-t sm:border-none">
                 {/* Menu Items */}
+                <li className="sm:inline-block">
+                  <Link className="hover:text-green-300 p-4" to="/">
+                    {/* Home */}
+                    Home
+                  </Link>
+                </li>
                 <li className="sm:inline-block">
                   <Link className="hover:text-green-300 p-4" to="/Resume">
                     Resume

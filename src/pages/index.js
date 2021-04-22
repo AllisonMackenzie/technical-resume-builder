@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { useTheme } from "@emotion/react";
 import Context from "../store/context";
-import Layout from "../components/Layout";
 import "../theme/global.css";
 
 const IndexPage = () => {
+  const { state } = useContext(Context);
+  const theme = useTheme();
+
   return (
     <React.Fragment>
-      <Layout>Hello</Layout>
+      <div>Test</div>
     </React.Fragment>
   );
 };

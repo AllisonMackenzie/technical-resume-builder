@@ -5,7 +5,6 @@ import Context from "../store/context";
 
 const Toggle = () => {
   const { state, dispatch } = useContext(Context);
-
   const theme = useTheme();
 
   return (
